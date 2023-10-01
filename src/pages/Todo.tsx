@@ -1,3 +1,13 @@
 import { TodoTemplate } from "../components/templates/TodoTemplate";
+import { TodoProvider } from "../context/TodoContext";
 
-export const Todo = () => <TodoTemplate />
+export const Todo = () => {
+
+  return (
+    <TodoProvider>
+      <TodoTemplate />
+    </TodoProvider>
+  )
+
+
+}

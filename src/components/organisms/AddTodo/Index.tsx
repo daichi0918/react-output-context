@@ -1,4 +1,5 @@
 import { InputForm } from "../../atoms/InputForm";
+import styles from './style.module.css';
 
 type Props = {
   addInputValue: string;
@@ -11,7 +12,7 @@ export const AddTodo = (props: Props) => {
 
   return(
     <>
-      <h2>ADD TODO</h2>
+      <h2 className={styles.subtitle}>ADD TODO</h2>
       <InputForm 
         placeholder={"New Todo"}
         value={addInputValue}

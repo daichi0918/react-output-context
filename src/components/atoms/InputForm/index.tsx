@@ -1,3 +1,5 @@
+import styles from './style.module.css';
+
 type Props = {
   placeholder: string;
   value: string;
@@ -10,6 +12,7 @@ export const InputForm = (props: Props) => {
 
   return(
     <input 
+      className={styles.input}
       type="text" 
       placeholder={placeholder} 
       value={value} 

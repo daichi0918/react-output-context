@@ -22,6 +22,12 @@ export const TodoTemplate = () => {
     }
   }
 
+  const handleDeleteTask = (index: number) => {
+    const newTodos = [...originTodoList];
+    newTodos.splice(index, 1);
+    setOriginTodoList(newTodos);
+  }
+
   const showTodoList = useMemo(() => {
     return originTodoList.filter((todo) => {
       // 検索キーワードに部分一致したTodoだけを一覧表示する
@@ -54,6 +60,7 @@ export const TodoTemplate = () => {
       <section>
         <TodoList 
           TodoList={showTodoList}
+          handleDeleteTask={handleDeleteTask}
         />
       </section>
     </div>
